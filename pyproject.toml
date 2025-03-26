@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llama-index-llms-asi"
+version = "0.1.0"
+description = "ASI integration for LlamaIndex"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "llama-index-llms-openai-like>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "mypy",
+    "ruff",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/llama-index-llms-asi"
+"Bug Tracker" = "https://github.com/yourusername/llama-index-llms-asi/issues"
+
+[tool.setuptools.packages.find]
+include = ["llama_index_llms_asi*"]
