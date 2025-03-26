@@ -7,7 +7,7 @@ name = "llama-index-llms-asi"
 version = "0.1.0"
 description = "ASI integration for LlamaIndex"
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Fetch.ai Inc.", email = "info@fetch.ai"}
 ]
 license = {text = "MIT"}
 requires-python = ">=3.8"
@@ -23,6 +23,8 @@ classifiers = [
 ]
 dependencies = [
     "llama-index-llms-openai-like>=0.1.0",
+    "llama-index-core>=0.10.0",
+    "requests>=2.31.0",
 ]
 
 [project.optional-dependencies]
@@ -34,10 +36,25 @@ dev = [
     "mypy",
     "ruff",
 ]
+examples = [
+    "llama-index-embeddings-huggingface",
+    "llama-index-embeddings-openai",
+]
 
 [project.urls]
-"Homepage" = "https://github.com/yourusername/llama-index-llms-asi"
-"Bug Tracker" = "https://github.com/yourusername/llama-index-llms-asi/issues"
+"Homepage" = "https://github.com/fetch-ai/llama-index-llms-asi"
+"Bug Tracker" = "https://github.com/fetch-ai/llama-index-llms-asi/issues"
+"Documentation" = "https://docs.fetch.ai"
 
 [tool.setuptools.packages.find]
 include = ["llama_index_llms_asi*"]
+
+[tool.llamahub]
+package-type = "llm"
+model-name = "asi"
+description = "ASI integration for LlamaIndex"
+organization = "Fetch.ai"
+repository = "https://github.com/fetch-ai/llama-index-llms-asi"
+release-date = "2025-03-26"
+categories = ["llm"]
+requires-api-key = true
